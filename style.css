@@ -1,1 +1,38 @@
 
+
+.bandeau {
+    width: 100%;
+    margin:0;
+    padding:0;
+    background-size: cover; /* version standardisée */
+  }
+
+  #logo{
+    width : "50px";
+  }
+  
+  .menu {
+    display: flex;              /* Transformation en flexbox */
+    padding:0;                  /* Suppression des marges internes */
+    background-color: #c79670;     /* Ajout de la couleur d'arrière-plan */
+}
+.menu li {
+    list-style-type: none ;       /* Suppression des puces */
+}
+  
+.menu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */
+}
+.menu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */   
+    margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+    padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+    text-align: center;           /* Centrage du texte */   
+                                   /* Couleur d'arrière-plan */
+    color: #fff;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+                                   /* Arrondis des bordures */
+}
+
