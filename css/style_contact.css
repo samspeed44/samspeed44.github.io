@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d0f0c0; /* Couleur de fond */
+}
+.bandeau {
+    width: 100%;
+    margin:0;
+    padding:0;
+    background-size: cover; /* version standardisée */
+  }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #8B4513; /* Couleur marron */
+    padding: 10px 20px;
+    border-radius: 15px; /* Coins arrondis */
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.navbar img {
+    height: 40px;
+    cursor: pointer;
+}
+.navbar .links {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #FFD700; /* Couleur dorée au survol */
+}
+
+/* Section Contact */
+.contact-container {
+    text-align: center;
+    padding: 20px;
+}
+.contact-container h1 {
+    font-size: 24px;
+    color: #4B5320; /* Vert foncé */
+}
+.contact-container hr {
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    border-top: 2px solid #4B5320;
+}
+.form-container {
+    background-color: #8B4513; /* Marron */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 520px; /* Largeur fixe pour un centrage parfait */
+    color: white;
+}
+.form-container label {
+    display: block; /* Texte au-dessus des champs */
+    text-align: left; /* Alignement à gauche */
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.form-container input,
+.form-container textarea {
+    width: 100%; /* Champs centrés par rapport à leur conteneur */
+    padding: 8px;
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.form-container input[type="submit"] {
+    background-color: #0047AB; /* Bleu */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #002E73; /* Bleu plus foncé */
+}
+.contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4B5320;
+}
+.footer {
+    text-align: center;
+    background-color: #8B4513;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,116 @@
+.bandeau {
+    width: 100%;
+    margin:0;
+    padding:0;
+    background-size: cover; /* version standardisée */
+  }
+/* Styles globaux */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d0f0c0; /* Couleur de fond */
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #8B4513; /* Couleur marron */
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.navbar img {
+  height: 40px;
+  cursor: pointer;
+}
+.navbar .links {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #FFD700; /* Couleur dorée au survol */
+}
+
+/* Section principale */
+.about-container {
+  text-align: center;
+  padding: 20px;
+}
+.about-container h1 {
+  font-size: 24px;
+  color: #4B5320; /* Vert foncé */
+}
+.about-container hr {
+  width: 80%;
+  margin: 10px auto;
+  border: none;
+  border-top: 2px solid #4B5320;
+}
+.about-section {
+  margin: 20px auto;
+  width: 80%;
+  background-color: #ffffff; /* Fond blanc */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  text-align: left;
+  color: #4B5320; /* Texte vert foncé */
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #8B4513;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Queries pour petits écrans */
+@media (max-width: 600px) {
+  .about-container h1 {
+      font-size: 20px;
+  }
+  .about-section {
+      width: 90%; /* Les sections s'étendent davantage */
+      font-size: 14px; /* Réduction du texte */
+  }
+  .navbar img {
+      height: 35px; /* Réduction de la taille du logo */
+  }
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px); /* Ajuste selon la hauteur totale de la page */
+  margin: 0;
+  padding: 0;
+  background: transparent; /* Aucune couleur de fond */
+}
+
+video {
+  width: 80%; /* Ajustez selon vos besoins */
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* Maintient un format 16:9 */
+  border: none; /* Supprime les bordures */
+  border-radius: 10px; /* Optionnel : coins arrondis */
+}
+

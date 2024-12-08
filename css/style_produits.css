@@ -1,0 +1,80 @@
+.bandeau {
+    width: 100%;
+    margin:0;
+    padding:0;
+    background-size: cover; /* version standardisée */
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d0f0c0; /* Couleur de fond */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #8B4513; /* Couleur marron */
+    padding: 10px 20px;
+    border-radius: 15px; /* Coins arrondis */
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.navbar img {
+    height: 40px;
+    cursor: pointer;
+}
+.navbar .links {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #FFD700; /* Couleur dorée au survol */
+}
+
+/* Section Produits */
+.products-container {
+    text-align: center;
+    padding: 20px;
+}
+.products-container h1 {
+    font-size: 24px;
+    color: #4B5320; /* Vert foncé */
+}
+.products-container hr {
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    border-top: 2px solid #4B5320;
+}
+.product-item {
+    background-color: white; /* Fond blanc des cartes */
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: 300px; /* Taille fixe des cartes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #4B5320; /* Texte vert foncé */
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #8B4513;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet">
-    <title>ECOCO</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style_contact.css" rel="stylesheet">
+    <title>Contact - Ecoco</title>
+</head>
+<body>
+  <img class="bandeau" src="img/banniere_V2.png" alt="Bannière">
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><img src="img/coco.png" alt="Logo Noix de Coco"></a>
+        <div class="links">
+            <a href="produits.html">Produits</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+        </div>
+    </div>
 
-  <body>
-    <img class="bandeau" src="img/banniere_V2.png" alt="Bannière"> 
-    <ul class="menu">
-      <li>
-          <a href="index.html"><img src="img/coco.png" alt="Image noix de coco" id="logo"></a>
-      </li>
-      <li>
-        <a href="produits.html">Produits</a>
-      </li>
-      <li>
-        <a href="contact.html">Contact</a>
-      </li>
-      <li>
-        <a href="a propos.html">A propos</a>
-      </li>
-      <li>
-        <a href="equipe.html">L'équipe</a>
-      </li>
-    </ul>
-    <h1>Contact</h1>
-  </body>
+    <!-- Section Contact -->
+    <div class="contact-container">
+        <h1>Contacts</h1>
+        <hr>
+        <div class="form-container">
+            <form action="submit_form.php" method="POST">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+        <div class="contact-info">
+            <p>Tel : 02 65 27 94 36</p>
+            <p>Adresse : 29 bis Rue Adolphe<br> Motié Nantes</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2002-2024, Ecoco.com Inc. ou ses affiliés
+    </div>
+</body>
 </html>
