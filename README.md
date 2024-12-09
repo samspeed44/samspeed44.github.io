@@ -1,10 +1,10 @@
-Projet Web Ecoco
+# Projet Web Ecoco
 
 Ce projet présente un site web pour Ecoco, une startup dédiée à la transformation durable de la noix de coco. Le site comprend plusieurs pages qui détaillent les produits, le contact, l'histoire de la startup, et sa vision.
 
 
 
-Structure du projet
+## Structure du projet
 
 Le projet est structuré autour de plusieurs fichiers HTML et CSS, organisés comme suit :
 
@@ -20,7 +20,7 @@ Les fichiers CSS associés contrôlent l'apparence du site et sont répartis dan
 
 
 
-Points forts du design
+## Points forts du design
 
 •	Design épuré et moderne : Chaque page utilise des couleurs douces inspirées de la nature pour une expérience apaisante.
 
@@ -32,11 +32,11 @@ Points forts du design
 
 
 
-Accès en ligne
+## Accès en ligne
 
 Vous pouvez consulter ce site directement en ligne via GitHub Pages à l'adresse suivante : https://samspeed44.github.io/
 
 
-Contributeurs
+## Contributeurs
 •	Nathan DECHARGÉ
 •	Gabriel THUET
