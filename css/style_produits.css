@@ -1,46 +1,51 @@
-/* --- Bandeau principal --- */
+/* --- Réinitialisation des marges globales --- */
+* {
+    box-sizing: border-box;
+}
+
+/* --- Bandeau principal pleine largeur --- */
 .bandeau {
-    width: 100%;
+    width: 100%; /* Occupe toute la largeur de l'écran */
     margin: 0;
     padding: 0;
-    background-size: cover; /* Ajuste pour couvrir toute la largeur */
+    background-size: cover; /* Adapte l'image à la largeur */
 }
 
 /* --- Styles globaux --- */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #d0f0c0; /* Couleur de fond */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: Arial, sans-serif; /* Police moderne et lisible */
+    background-color: #d0f0c0; /* Couleur de fond apaisante */
 }
 
-/* --- Navbar --- */
+/* --- Barre de navigation --- */
 .navbar {
-    display: flex;
-    align-items: center; /* Aligne les éléments verticalement au centre */
+    display: flex; /* Mise en page flexible */
+    align-items: center; /* Aligne verticalement les éléments */
     background-color: #8B4513; /* Couleur marron */
     padding: 10px 20px;
     border-radius: 15px; /* Coins arrondis */
-    margin: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    margin: 10px; /* Espacement autour de la navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre élégante */
 }
 
 .navbar img {
     height: 40px; /* Taille du logo */
-    cursor: pointer;
+    cursor: pointer; /* Effet de clic */
 }
 
 .navbar .links {
-    margin-left: auto; /* Décale les liens à droite */
-    display: flex;
-    gap: 15px; /* Espacement entre les liens */
+    margin-left: auto; /* Décale les liens vers la droite */
+    display: flex; /* Aligne les liens horizontalement */
+    gap: 15px; /* Espacement entre chaque lien */
 }
 
 .navbar a {
-    color: white; /* Couleur du texte */
-    text-decoration: none; /* Supprime les soulignements */
-    font-size: 16px;
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 16px; /* Taille du texte */
     font-weight: bold;
-    transition: color 0.3s; /* Transition pour l'effet de survol */
+    transition: color 0.3s; /* Transition douce pour l'effet de survol */
 }
 
 .navbar a:hover {
@@ -49,42 +54,63 @@ body {
 
 /* --- Section Produits --- */
 .products-container {
-    text-align: center;
-    padding: 20px;
+    text-align: center; /* Centre tout le contenu */
+    padding: 20px; /* Ajoute de l'espace autour */
 }
 
 .products-container h1 {
-    font-size: 24px; /* Taille du titre */
+    font-size: 24px; /* Taille principale du titre */
     color: #4B5320; /* Couleur vert foncé */
 }
 
 .products-container hr {
-    width: 80%; /* Largeur de la ligne */
-    margin: 10px auto;
+    width: 80%; /* Largeur de la ligne horizontale */
+    margin: 10px auto; /* Centre la ligne */
     border: none;
-    border-top: 2px solid #4B5320; /* Ligne séparatrice vert foncé */
+    border-top: 2px solid #4B5320; /* Ligne fine et élégante */
 }
 
 .product-item {
-    background-color: white; /* Fond blanc des cartes */
+    background-color: white; /* Fond blanc pour les cartes */
     padding: 15px; /* Espacement interne */
-    margin: 15px auto; /* Espacement externe */
+    margin: 15px auto; /* Espacement autour des cartes */
     border-radius: 10px; /* Coins arrondis */
-    width: 300px; /* Taille fixe des cartes */
+    width: 90%; /* Taille par défaut des cartes (responsive) */
+    max-width: 300px; /* Limite maximale */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
     font-size: 16px; /* Taille du texte */
-    color: #4B5320; /* Couleur vert foncé pour le texte */
-    font-weight: bold; /* Met le texte en gras */
+    color: #4B5320; /* Couleur vert foncé */
+    font-weight: bold; /* Texte en gras */
 }
 
 /* --- Footer --- */
 .footer {
-    text-align: center; /* Centrer le texte */
+    text-align: center; /* Centre le texte */
     background-color: #8B4513; /* Fond marron */
     color: white; /* Texte blanc */
     padding: 10px;
-    font-size: 12px; /* Taille du texte */
+    font-size: 12px; /* Taille réduite du texte */
     position: relative;
     bottom: 0;
     width: 100%; /* Prend toute la largeur */
+}
+
+/* --- Media Queries pour les petits écrans --- */
+@media (max-width: 600px) {
+    .navbar img {
+        height: 30px; /* Réduit la taille du logo sur mobile */
+    }
+
+    .navbar .links a {
+        font-size: 14px; /* Réduit la taille des liens */
+    }
+
+    .products-container h1 {
+        font-size: 20px; /* Taille du titre ajustée */
+    }
+
+    .product-item {
+        font-size: 14px; /* Réduit la taille du texte des produits */
+        padding: 10px; /* Réduit l'espacement */
+    }
 }

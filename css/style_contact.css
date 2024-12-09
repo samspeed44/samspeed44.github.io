@@ -1,34 +1,44 @@
+/* --- Réinitialisation des marges globales --- */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #d0f0c0; /* Couleur de fond */
+    background-color: #d0f0c0; /* Couleur de fond douce */
 }
-.bandeau {
-    width: 100%;
-    margin:0;
-    padding:0;
-    background-size: cover; /* version standardisée */
-  }
 
-/* Navbar */
+/* --- Bandeau principal --- */
+.bandeau {
+    width: 100%; /* Pleine largeur */
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+/* --- Navbar --- */
 .navbar {
-    display: flex;
-    align-items: center;
+    display: flex; /* Mise en page flexible */
+    align-items: center; /* Alignement vertical */
     background-color: #8B4513; /* Couleur marron */
     padding: 10px 20px;
-    border-radius: 15px; /* Coins arrondis */
+    border-radius: 15px;
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 .navbar img {
     height: 40px;
-    cursor: pointer;
+    cursor: pointer; /* Indique que l'élément est cliquable */
 }
+
 .navbar .links {
-    margin-left: auto;
+    margin-left: auto; /* Aligne les liens à droite */
     display: flex;
     gap: 15px;
 }
+
 .navbar a {
     color: white;
     text-decoration: none;
@@ -36,64 +46,78 @@ body {
     font-weight: bold;
     transition: color 0.3s;
 }
+
 .navbar a:hover {
     color: #FFD700; /* Couleur dorée au survol */
 }
 
-/* Section Contact */
+/* --- Section Contact --- */
 .contact-container {
     text-align: center;
     padding: 20px;
 }
+
 .contact-container h1 {
     font-size: 24px;
     color: #4B5320; /* Vert foncé */
 }
+
 .contact-container hr {
     width: 80%;
     margin: 10px auto;
     border: none;
-    border-top: 2px solid #4B5320;
+    border-top: 2px solid #4B5320; /* Ligne élégante */
 }
+
+/* Formulaire de contact */
 .form-container {
-    background-color: #8B4513; /* Marron */
+    background-color: #8B4513; /* Fond marron */
     padding: 20px;
     border-radius: 10px;
     margin: 20px auto;
-    width: 520px; /* Largeur fixe pour un centrage parfait */
+    width: 90%; /* Largeur adaptative */
+    max-width: 520px; /* Limite maximale */
     color: white;
 }
+
 .form-container label {
-    display: block; /* Texte au-dessus des champs */
-    text-align: left; /* Alignement à gauche */
+    display: block;
+    text-align: left;
     margin-bottom: 5px;
     font-size: 14px;
 }
+
 .form-container input,
 .form-container textarea {
-    width: 100%; /* Champs centrés par rapport à leur conteneur */
+    width: 100%;
     padding: 8px;
-    margin-bottom: 15px; /* Espacement entre les champs */
+    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
     font-size: 14px;
 }
+
 .form-container input[type="submit"] {
-    background-color: #0047AB; /* Bleu */
+    background-color: #0047AB; /* Bleu principal */
     color: white;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .form-container input[type="submit"]:hover {
-    background-color: #002E73; /* Bleu plus foncé */
+    background-color: #002E73; /* Bleu foncé au survol */
 }
+
+/* Informations de contact */
 .contact-info {
     margin-top: 20px;
     font-size: 14px;
-    color: #4B5320;
+    color: #4B5320; /* Vert foncé */
 }
+
+/* Footer */
 .footer {
     text-align: center;
     background-color: #8B4513;
@@ -103,4 +127,24 @@ body {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* --- Responsivité pour les petits écrans --- */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px; /* Réduction du padding */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 12px; /* Réduction de la taille du texte */
+    }
+
+    .contact-container h1 {
+        font-size: 20px; /* Ajustement de la taille du titre */
+    }
+
+    .contact-info {
+        font-size: 12px; /* Texte plus petit pour les informations */
+    }
 }

@@ -1,107 +1,106 @@
-/* --- Bandeau principal --- */
+/* --- Empèche les éléments de dépasser de la page --- */
+* {
+  box-sizing: border-box;
+}
+
+/* --- Bandeau principal pleine largeur --- */
 .bandeau {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-size: cover; /* Ajuste la taille pour couvrir toute la largeur */
+  background-size: cover; /* Adaptation à la largeur de l'écran */
 }
 
 /* --- Styles globaux --- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #d0f0c0; /* Couleur de fond */
+  background-color: #d0f0c0; /* Couleur de fond apaisante */
 }
 
-/* --- Navbar --- */
+/* --- Barre de navigation --- */
 .navbar {
   display: flex;
-  align-items: center;
+  align-items: center; /* Centrage vertical */
   background-color: #8B4513; /* Couleur marron */
   padding: 10px 20px;
   border-radius: 15px;
-  margin: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: calc(100% - 20px); /* Ajuste la largeur pour compenser le padding */
+  margin: 0 auto; /* Centrer la barre */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre élégante */
 }
 
 .navbar img {
   height: 40px;
-  cursor: pointer;
+  cursor: pointer; /* Ajout d'un effet clic sur le logo */
 }
 
 .navbar .links {
-  margin-left: auto;
+  margin-left: auto; /* Décalage des liens à droite */
   display: flex;
-  gap: 15px;
+  gap: 15px; /* Espacement uniforme entre les liens */
 }
 
 .navbar a {
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Suppression du soulignement */
   font-size: 16px;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Transition douce au survol */
 }
 
 .navbar a:hover {
   color: #FFD700; /* Couleur dorée au survol */
 }
 
-/* --- Section principale --- */
+/* --- Conteneur principal --- */
 .about-container {
-  text-align: center;
+  text-align: center; /* Centrage des textes */
   padding: 20px;
 }
 
 .about-container h1 {
-  font-size: 24px;
-  color: #4B5320; /* Vert foncé */
+  font-size: 24px; /* Taille principale du titre */
+  color: #4B5320; /* Couleur vert foncé */
 }
 
 .about-container hr {
   width: 80%;
   margin: 10px auto;
   border: none;
-  border-top: 2px solid #4B5320;
+  border-top: 2px solid #4B5320; /* Ligne fine et élégante */
 }
 
 .about-section {
   margin: 20px auto;
-  width: 80%;
-  background-color: #ffffff; /* Fond blanc */
+  width: 80%; /* Réduction automatique sur petits écrans */
+  background-color: #ffffff;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  text-align: left;
-  color: #4B5320;
+  color: #4B5320; /* Texte vert foncé */
   line-height: 1.5;
 }
 
 /* --- Section vidéo --- */
 .video-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Aligne vidéo et audio en colonne */
   align-items: center;
-  width: 100%;
-  height: calc(100vh - 100px);
-  margin: 0;
-  padding: 0;
-  background: transparent;
+  gap: 15px; /* Espacement entre les éléments */
 }
 
-video {
+video, audio {
   width: 80%;
   max-width: 800px;
-  aspect-ratio: 16 / 9;
-  border: none;
-  border-radius: 10px;
+  border-radius: 10px; /* Coins arrondis */
 }
 
 /* --- Footer --- */
 .footer {
   text-align: center;
-  background-color: #8B4513;
+  background-color: #8B4513; /* Marron assorti à la navbar */
   color: white;
   padding: 10px;
   font-size: 12px;
@@ -110,24 +109,28 @@ video {
   width: 100%;
 }
 
-/* --- Textes en surbrillance --- */
+/* --- Surbrillance des textes importants --- */
 .highlight {
   font-weight: bold;
-  color: #2a7a4d;
+  color: #2a7a4d; /* Vert accentué */
 }
 
-/* --- Media Queries pour les petits écrans --- */
+/* --- Responsivité pour les petits écrans --- */
 @media (max-width: 600px) {
   .about-container h1 {
-      font-size: 20px;
+      font-size: 20px; /* Réduction de la taille du titre */
   }
 
   .about-section {
       width: 90%;
-      font-size: 14px;
+      font-size: 14px; /* Texte plus compact */
   }
 
   .navbar img {
-      height: 35px;
+      height: 35px; /* Logo réduit */
+  }
+
+  video, audio {
+      width: 95%; /* Ajustement pour mobiles */
   }
 }
