@@ -70,6 +70,15 @@ body {
     border-top: 2px solid #4B5320; /* Ligne fine et élégante */
 }
 
+/* Conteneur de produits avec flexbox */
+.product-list {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'ajuster les éléments sur plusieurs lignes si nécessaire */
+    justify-content: space-evenly; /* Répartit les éléments de manière égale sur toute la largeur */
+    gap: 20px; /* Ajoute de l'espace entre les items */
+}
+
+/* Styles pour chaque box */
 .product-item {
     background-color: white; /* Fond blanc pour les cartes */
     padding: 15px; /* Espacement interne */
@@ -81,6 +90,24 @@ body {
     font-size: 16px; /* Taille du texte */
     color: #4B5320; /* Couleur vert foncé */
     font-weight: bold; /* Texte en gras */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Animation au survol */
+}
+
+.product-item h2 {
+    font-size: 20px;
+    color: #2a7a4d;
+}
+
+.product-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-item li {
+    margin: 10px 0;
 }
 
 /* --- Footer --- */
