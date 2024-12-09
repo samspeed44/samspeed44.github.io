@@ -114,3 +114,7 @@ video {
   border-radius: 10px; /* Optionnel : coins arrondis */
 }
 
+.highlight {
+  font-weight: bold;
+  color: #2a7a4d;
+}

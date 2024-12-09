@@ -100,3 +100,8 @@ body {
     margin-top: 0px;
     font-style: auto;
 }
+
+.highlight {
+    font-weight: bold;
+    color: #2a7a4d;
+}
