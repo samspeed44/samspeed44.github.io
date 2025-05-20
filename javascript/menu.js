@@ -18,3 +18,11 @@ function main(){
     console.log(date());
 }
 main();
+
+/*
+function setTimeout(function() {
+            window.location.href = "page-suivante.html";
+            
+        }, 5000);
+
+*/  
