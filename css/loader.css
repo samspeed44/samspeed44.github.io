@@ -1,13 +1,26 @@
+/* Loader circulaire animé */
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+  position: fixed;              /* Pour qu’il reste visible sur toute la page */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centre le loader à l’écran */
+  border: 16px solid #f3f3f3;   /* Cercle gris clair */
+  border-top: 16px solid #3498db; /* Partie bleue pour l’animation */
+  border-radius: 50%;          /* Pour obtenir un cercle */
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite; /* Animation de rotation */
+  z-index: 9999;               /* Pour qu’il soit au-dessus de tout */
+  background-color: transparent;
+}
+
+/* Animation de rotation continue */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Classe pour masquer le loader */
+.hidden {
+  display: none;
+}
