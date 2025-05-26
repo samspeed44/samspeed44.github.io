@@ -148,3 +148,31 @@ body {
         font-size: 12px; /* Texte plus petit pour les informations */
     }
 }
+
+
+.error {
+    color: #FFD700;
+    font-size: 12px;
+    text-align: left;
+    margin: -10px 0 10px 0;
+}
+input:invalid, textarea:invalid {
+    outline: 1px solid red;
+}
+input:valid, textarea:valid {
+    outline: none;
+}
+
+
+.confirmation-message {
+    margin-top: 10px;
+    color: #2a7a4d;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}

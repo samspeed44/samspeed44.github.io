@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.icon" href="img/coco_favicon.ico">
+
+    <!-- fichiers css -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/loader.css" rel="stylesheet">
+    <link href="css/style_horloge.css" rel="stylesheet">
+    <link href="css/remonter.css" rel="stylesheet">
+
+    <!-- fichiers javascript -->
     <script src="javascript/general.js" defer></script>
-    <script src="javascript/menu.js" defer></script>
+    <script src="javascript/loader.js" defer></script>
+    <script src="javascript/telephone.js" defer></script>
+    <script src="javascript/remonter.js" defer></script>
+    
     <title>Accueil</title>
 </head>
 <body>
     <!-- Bandeau principal avec une image pleine largeur -->
     <img class="bandeau" src="img/banniere_V2.png" alt="Bannière">
-    <div class="loader"></div>
 
     <!-- Loader : masqué par défaut grâce à la classe "hidden" -->
     <div id="loader" class="loader hidden"></div>
@@ -33,6 +41,11 @@
 
     <!-- Conteneur principal pour le contenu de la page -->
     <div class="about-container">
+         
+        <div class="time-container">
+        <div>Heure : <span id="horloge">--:--:--</span></div>
+        <div>Temps passé : <span id="chrono">00:00:00</span></div>
+        </div>
         <h1>Ecoco</h1>
         <h1 id="date-container"></h1>
     
@@ -88,6 +101,18 @@
     <!-- Footer simple et informatif -->
     <div class="footer">
         © 2002-2024, Ecoco.com Inc. ou ses affiliés
+        <div class="footer-coords">
+            <p><strong>Brest :</strong> <span class="tel" data-num="+33298038400">02 98 03 84 00</span></p>
+            <p><strong>Caen :</strong> <span class="tel" data-num="+33230310320">02 30 31 03 20</span></p>
+            <p><strong>Nantes :</strong> <span class="tel" data-num="+33230130560">02 30 13 05 60</span></p>
+            <p><strong>Rennes :</strong> <span class="tel" data-num="+33230130250">02 30 13 02 50</span></p>
+        </div>
     </div>
+
+    <!-- Bouton de retour en haut -->
+    <div id="backToTop" class="back-to-top" title="Remonter en haut">
+    ↑
+    </div>
+
 </body>
 </html>

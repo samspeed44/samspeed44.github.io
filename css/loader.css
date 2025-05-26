@@ -1,26 +1,36 @@
-/* Loader circulaire animé */
+/* --- Loader : fond blanc semi-transparent qui couvre tout l'écran --- */
 .loader {
-  position: fixed;              /* Pour qu’il reste visible sur toute la page */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centre le loader à l’écran */
-  border: 16px solid #f3f3f3;   /* Cercle gris clair */
-  border-top: 16px solid #3498db; /* Partie bleue pour l’animation */
-  border-radius: 50%;          /* Pour obtenir un cercle */
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite; /* Animation de rotation */
-  z-index: 9999;               /* Pour qu’il soit au-dessus de tout */
-  background-color: transparent;
+    position: fixed;           /* Reste toujours visible même quand on scroll */
+    top: 0;
+    left: 0;
+    width: 100%;               /* Prend toute la largeur */
+    height: 100%;              /* Prend toute la hauteur */
+    background: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+    display: flex;             /* Centre le cercle de chargement */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;             /* Affiché au-dessus de tout le reste */
 }
 
-/* Animation de rotation continue */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Classe pour masquer le loader */
+/* --- Masque le loader quand on ajoute la classe "hidden" --- */
 .hidden {
-  display: none;
+    display: none;
+}
+
+/* --- Cercle animé qui tourne --- */
+.loader::after {
+    content: "";               /* Nécessaire pour créer l’élément visuel */
+    width: 40px;
+    height: 40px;
+    border: 5px solid #8B4513; /* Couleur marron (style Ecoco) */
+    border-top-color: transparent; /* Une partie vide pour créer l'effet de rotation */
+    border-radius: 50%;        /* Forme un cercle */
+    animation: spin 1s linear infinite; /* Fait tourner le cercle */
+}
+
+/* --- Définition de l'animation de rotation --- */
+@keyframes spin {
+    to {
+        transform: rotate(360deg); /* Tourne sur lui-même */
+    }
 }

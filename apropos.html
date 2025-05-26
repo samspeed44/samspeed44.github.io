@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.icon" href="img/coco_favicon.ico">
+
+
+    <!-- fichiers css -->
     <link href="css/style_apropos.css" rel="stylesheet">
     <link href="css/loader.css" rel="stylesheet">
+    <link href="css/style_horloge.css" rel="stylesheet">
+    <link href="css/style_apropos.css" rel="stylesheet">
+
+    <!-- fichiers javascript -->
     <script src="javascript/general.js" defer></script>
-    <script src="javascript/menu.js" defer></script>
+    <script src="javascript/loader.js" defer></script>
+    <script src="javascript/telephone.js" defer></script>
+    <script src="javascript/apropos.js" defer></script>
+
+
+
+
+    <link href="css/style_apropos.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="css/style_horloge.css" rel="stylesheet">
+    <script src="javascript/general.js" defer></script>
+    <script src="javascript/loader.js" defer></script>
     <title>À propos - Ecoco</title>
 </head>
 <body>
     <!-- Bandeau principal -->
     <img class="bandeau" src="img/banniere_V2.png" alt="Bannière">
+
+    <!-- Loader : masqué par défaut grâce à la classe "hidden" -->
+    <div id="loader" class="loader hidden"></div>
 
     <!-- Navbar -->
     <div class="navbar">
@@ -25,9 +46,14 @@
             <a href="apropos.html" class="chargement">À propos</a>
         </div>
     </div>
+    
 
     <!-- Section principale -->
     <div class="about-container">
+        <div class="time-container">
+        <div>Heure : <span id="horloge">--:--:--</span></div>
+        <div>Temps passé : <span id="chrono">00:00:00</span></div>
+        </div>
         <h1>À propos</h1>
         <hr>
 
@@ -47,12 +73,13 @@
             <h3>🎯 Mission</h3>
             <p class="highlight">Réinventer la consommation en proposant une expérience durable et artistique autour des noix de coco.</p>
             <ul>
-                <li><strong>Offrir des produits de qualité :</strong> noix de coco fraîches et issues de circuits responsables.</li>
-                <li><strong>Promouvoir la durabilité :</strong> réduire le gaspillage et valoriser chaque fruit.</li>
-                <li><strong>Encourager la créativité :</strong> donner des outils pour des créations uniques.</li>
-                <li><strong>Sensibiliser à l’écologie :</strong> éduquer sur les habitudes respectueuses de l’environnement.</li>
-                <li><strong>Soutenir les communautés locales :</strong> travailler avec des producteurs et artisans locaux.</li>
-            </ul>
+               <li><strong class="mission-title">Offrir des produits de qualité :</strong> noix de coco fraîches et issues de circuits responsables.</li>
+               <li><strong class="mission-title">Promouvoir la durabilité :</strong> réduire le gaspillage et valoriser chaque fruit.</li>
+               <li><strong class="mission-title">Encourager la créativité :</strong> donner des outils pour des créations uniques.</li>
+               <li><strong class="mission-title">Sensibiliser à l’écologie :</strong> éduquer sur les habitudes respectueuses de l’environnement.</li>
+               <li><strong class="mission-title">Soutenir les communautés locales :</strong> travailler avec des producteurs et artisans locaux.</li>
+           </ul>
+
         </div>
 
         <!-- Équipe -->
@@ -60,12 +87,19 @@
             <h2>Équipe</h2>
             <div class="team">
                 <div class="team-member">
+                  <div class="photo-wrapper">
                     <img src="img/nathan.png" alt="Photo de Nathan">
-                    <p>Nathan DECHARGÉ</p>
+                    <div class="photo-cover"></div>
+                  </div>
+                  <p>Nathan DECHARGÉ</p>
                 </div>
+                
                 <div class="team-member">
-                    <img src="img/gabriel.png" alt="Photo de Gabriel">
-                    <p>Gabriel THUET</p>
+                  <div class="photo-wrapper">
+                     <img src="img/gabriel.png" alt="Photo de Nathan">
+                     <div class="photo-cover"></div>
+                  </div>
+                  <p>Gabriel THUET</p>
                 </div>
             </div>
         </div>
@@ -74,6 +108,19 @@
     <!-- Footer -->
     <div class="footer">
         © 2002-2024, Ecoco.com Inc. ou ses affiliés
+        <div class="footer-coords">
+            <p><strong>Brest :</strong> <span class="tel" data-num="+33298038400">02 98 03 84 00</span></p>
+            <p><strong>Caen :</strong> <span class="tel" data-num="+33230310320">02 30 31 03 20</span></p>
+            <p><strong>Nantes :</strong> <span class="tel" data-num="+33230130560">02 30 13 05 60</span></p>
+            <p><strong>Rennes :</strong> <span class="tel" data-num="+33230130250">02 30 13 02 50</span></p>
+        </div>
     </div>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <p id="modal-text">Texte de mission...</p>
+    </div>
+</div>
 </body>
 </html>
+

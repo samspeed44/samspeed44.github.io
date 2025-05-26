@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.icon" href="img/coco_favicon.ico">
+
+    <!-- fichiers css -->
     <link href="css/style_contact.css" rel="stylesheet">
     <link href="css/loader.css" rel="stylesheet">
+    <link href="css/style_horloge.css" rel="stylesheet">
+
+    <!-- fichiers javascript -->
     <script src="javascript/general.js" defer></script>
-    <script src="javascript/menu.js" defer></script>
+    <script src="javascript/loader.js" defer></script>
+    <script src="javascript/telephone.js" defer></script>
+    <script src="javascript/contact_validation.js" defer></script>
+
+
     <title>Contact - Ecoco</title>
 </head>
 <body>
     <!-- Bandeau principal -->
     <img class="bandeau" src="img/banniere_V2.png" alt="Bannière">
+
+    <!-- Loader : masqué par défaut grâce à la classe "hidden" -->
+    <div id="loader" class="loader hidden"></div>
 
     <!-- Navbar -->
     <div class="navbar">
@@ -27,27 +39,34 @@
     </div>
 
     <!-- Section Contact -->
+     
     <div class="contact-container">
+         
+        <div class="time-container">
+        <div>Heure : <span id="horloge">--:--:--</span></div>
+        <div>Temps passé : <span id="chrono">00:00:00</span></div>
+        </div>
         <h1>Nous contacter</h1>
         <hr>
         
         <!-- Formulaire de contact -->
         <div class="form-container">
-            <form action="submit" method="POST">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
-                
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-                
+            <form method="POST">
+                <label for="prenomnom">Prénom Nom</label>
+                <input type="text" id="prenomnom" name="prenomnom" placeholder="Prénom Nom" required>
+                <div class="error" id="prenomnom-error"></div>
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Votre email" required>
-                
+                <div class="error" id="email-error"></div>
+
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
-                
-                <input type="submit" value="Envoyer">
+                <div class="error" id="message-error"></div>
+
+                <input type="submit" id="submitBtn" value="Envoyer" disabled>
             </form>
+            <p id="confirmation-message" class="confirmation-message hidden">Votre message a bien été envoyé !</p>
         </div>
         
         <!-- Informations de contact -->
@@ -60,6 +79,12 @@
     <!-- Footer -->
     <div class="footer">
         © 2002-2024, Ecoco.com Inc. ou ses affiliés
+        <div class="footer-coords">
+            <p><strong>Brest :</strong> <span class="tel" data-num="+33298038400">02 98 03 84 00</span></p>
+            <p><strong>Caen :</strong> <span class="tel" data-num="+33230310320">02 30 31 03 20</span></p>
+            <p><strong>Nantes :</strong> <span class="tel" data-num="+33230130560">02 30 13 05 60</span></p>
+            <p><strong>Rennes :</strong> <span class="tel" data-num="+33230130250">02 30 13 02 50</span></p>
+        </div>
     </div>
 </body>
 </html>
