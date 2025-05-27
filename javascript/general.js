@@ -1,64 +1,65 @@
-
-// Alerte dans la console lors d'une copie
-//la fonction est appellée quand l'utilisateur copie grace à 'copy'
-document.addEventListener('copy', function(event) { 
-    console.warn("🔔 Attention : Le plagiat est interdit. Merci de respecter les droits d'auteur !");
+//Message dans la console si l'utilisateur copie quelque chose
+document.addEventListener('copy', function () {
+  console.warn("Le plagiat est interdit !");
 });
 
-// Horloge temps réel
-function mettreAJourHorloge() {
-  const maintenant = new Date();
-  const heures = maintenant.getHours().toString().padStart(2, '0');
-  const minutes = maintenant.getMinutes().toString().padStart(2, '0');
-  const secondes = maintenant.getSeconds().toString().padStart(2, '0');
-  document.getElementById('horloge').textContent = `${heures}:${minutes}:${secondes}`;
+//Affiche l'heure actuelle dans l'élément avec id="horloge"
+function horloge() {
+  let maintenant = new Date();
+  let h = maintenant.getHours();
+  let m = maintenant.getMinutes();
+  let s = maintenant.getSeconds();
+
+  // Ajoute un 0 devant si nécessaire
+  if (h < 10) h = '0' + h;
+  if (m < 10) m = '0' + m;
+  if (s < 10) s = '0' + s;
+
+  document.getElementById('horloge').textContent = h + ':' + m + ':' + s;
 }
 
-// Chronomètre temps passé
-let secondesPassees = 0;
-function mettreAJourChrono() {
-  secondesPassees++;
-  const heures = Math.floor(secondesPassees / 3600).toString().padStart(2, '0');
-  const minutes = Math.floor((secondesPassees % 3600) / 60).toString().padStart(2, '0');
-  const secondes = (secondesPassees % 60).toString().padStart(2, '0');
-  document.getElementById('chrono').textContent = `${heures}:${minutes}:${secondes}`;
+//Chrono qui augmente chaque seconde
+let secondes = 0;
+function chrono() {
+  secondes++;
+
+  let h = Math.floor(secondes / 3600);
+  let m = Math.floor((secondes % 3600) / 60);
+  let s = secondes % 60;
+
+  if (h < 10) h = '0' + h;
+  if (m < 10) m = '0' + m;
+  if (s < 10) s = '0' + s;
+
+  document.getElementById('chrono').textContent = h + ':' + m + ':' + s;
 }
 
-// Initialisation
-setInterval(mettreAJourHorloge, 1000);
-setInterval(mettreAJourChrono, 1000);
-mettreAJourHorloge();
+// Lance les deux fonctions chaque seconde
+setInterval(horloge, 1000);
+setInterval(chrono, 1000);
+horloge(); // pour que l'horloge s'affiche sans attendre 1 seconde
 
+// Quand la page est prête
 document.addEventListener("DOMContentLoaded", function () {
-  const lienEquipe = document.querySelector('a[href="apropos.html"]');
 
-  if (lienEquipe) {
-    lienEquipe.addEventListener("click", function (e) {
-      const confirmation = confirm("Voulez-vous vraiment accéder à la page PRÉSENTATION DE L'ÉQUIPE ?");
-      if (!confirmation) {
-        e.preventDefault(); // Empêche la navigation
+  //Confirmation avant d'aller sur la page équipe
+  let lien = document.querySelector('a[href="apropos.html"]');
+  if (lien) {
+    lien.addEventListener("click", function (e) {
+      if (!confirm("Aller à la page ÉQUIPE ?")) {
+        e.preventDefault(); // Annule le clic si on répond "non"
       }
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll('.product-item');
-
-  items.forEach(item => {
-    item.addEventListener('click', function () {
-      // Récupérer la couleur actuelle de fond (ancienne)
-      const oldColor = window.getComputedStyle(item).backgroundColor;
-
-      // Définir une nouvelle couleur au clic
-      const newColor = '#87CEFA'; // Exemple : bleu clair (modifiable)
-
-      // Appliquer la nouvelle couleur
-      item.style.backgroundColor = newColor;
-
-      // Afficher dans la console
-      console.log(`✅ L'item a été cliqué. Ancienne couleur : ${oldColor}, nouvelle couleur : ${newColor}`);
+  //Quand on clique sur un produit, il change de couleur
+  let produits = document.querySelectorAll('.product-item');
+  produits.forEach(function (p) {
+    p.addEventListener('click', function () {
+      let avant = window.getComputedStyle(p).backgroundColor;
+      let apres = '#87CEFA'; // bleu clair
+      p.style.backgroundColor = apres;
+      console.log("Produit cliqué - Avant : " + avant + " / Après : " + apres);
     });
   });
 });
-

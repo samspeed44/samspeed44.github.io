@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Défile vers le haut de façon fluide
+    // Remonte vers le haut
     btnTop.addEventListener("click", () => {
         window.scrollTo({
             top: 0,

@@ -1,30 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let numeros = document.querySelectorAll(".tel");
+// Quand la page est chargée
+document.addEventListener("DOMContentLoaded", function () {
+  // On récupère tous les éléments contenant un numéro de téléphone
+  let numeros = document.querySelectorAll(".tel");
 
-    // Crée une instance audio
-    let sonnerie = new Audio("video/ringtone.mp3");
+  // Prépare un son de sonnerie
+  let sonnerie = new Audio("video/ringtone.mp3");
 
-    numeros.forEach(el => {
-        el.addEventListener("copy", (e) => {
-            let numero = el.getAttribute("data-num");
+  // Pour chaque numéro, événement lors d'une copie
+  numeros.forEach(function (element) {
+    element.addEventListener("copy", function () {
+      // On prend le numero visible
+      let numeroAffiche = element.textContent.trim();
 
-            setTimeout(() => {
-                const confirmation = prompt(
-                    `Si vous voulez appeler ce numéro : ${numero},\nentrez-le de nouveau dans le champ ci-dessous puis validez.`
-                );
+      setTimeout(function () {
+        // On demande à l’utilisateur de confirmer le numéro copié
+        let confirmation = prompt(
+          "Si vous voulez appeler ce numéro : " + numeroAffiche + 
+          "\nEntrez-le de nouveau ci-dessous puis validez."
+        );
 
-                    console.log(`Vous appelez ce numéro : ${numero}`);
+        // Si l’utilisateur retape le numéro
+          console.log("Vous appelez ce numéro : " + numeroAffiche);
 
-                    // Joue la sonnerie
-                    sonnerie.currentTime = 0;
-                    sonnerie.play();
+          // On joue la sonnerie
+          sonnerie.currentTime = 0;
+          sonnerie.play();
 
-                    // Arrête la sonnerie après 5 secondes
-                    setTimeout(() => {
-                        sonnerie.pause();
-                        sonnerie.currentTime = 0;
-                    }, 5000);
-                }, 100);
-            });
-        });
+          // On arrête la sonnerie après 5 secondes
+          setTimeout(function () {
+            sonnerie.pause();
+            sonnerie.currentTime = 0;
+          }, 5000);
+      }, 100);
     });
+  });
+});

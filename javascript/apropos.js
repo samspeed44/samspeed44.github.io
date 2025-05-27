@@ -1,45 +1,48 @@
-
-
+// Quand toute la page est chargée (HTML + éléments)
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.photo-cover').forEach(cover => {
-    cover.addEventListener('click', () => {
-      cover.style.opacity = '0';
-      cover.style.pointerEvents = 'none'; // empêche d'y recliquer
+  
+  // Image masquée
+  document.querySelectorAll('.photo-cover').forEach(image => {
+    image.addEventListener('click', () => {
+      image.style.opacity = '0';           // rend l'image complètement transparente
+      image.style.pointerEvents = 'none';  // empêche qu'on puisse cliquer à nouveau dessus
     });
   });
-});
 
+  // Fenêtre pop up
+  const modal = document.getElementById('modal');             // fenêtre modale
+  const modalText = document.getElementById('modal-text');    // zone de texte dans la modale
+  const closeBtn = document.querySelector('.close-button');   // bouton "fermer" dans la modale
 
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('modal');
-  const modalText = document.getElementById('modal-text');
-  const closeButton = document.querySelector('.close-button');
-
-  const missionDescriptions = {
-    "Offrir des produits de qualité": "Nous sélectionnons des noix de coco issues de filières responsables, garantissant fraîcheur et respect de l’environnement.",
-    "Promouvoir la durabilité": "Notre objectif est de réutiliser chaque partie de la noix de coco pour limiter les déchets.",
-    "Encourager la créativité": "Nous offrons des idées, tutoriels et matériaux pour transformer vos noix en objets uniques.",
-    "Sensibiliser à l’écologie": "Par des ateliers et des contenus éducatifs, nous partageons des gestes écologiques du quotidien.",
-    "Soutenir les communautés locales": "Nous collaborons avec des producteurs locaux pour un impact social et économique positif."
+  // Liste des textes à afficher selon le titre cliqué
+  const textes = {
+    "Offrir des produits de qualité": "Nous sélectionnons des cocos issues de filières responsables.",
+    "Promouvoir la durabilité": "Nous réutilisons chaque partie de la noix de coco.",
+    "Encourager la créativité": "Des idées et outils pour vos créations originales.",
+    "Sensibiliser à l'écologie": "Nous partageons des gestes simples pour préserver la planète.",
+    "Soutenir les communautés locales": "Nous travaillons avec des producteurs locaux."
   };
 
-  document.querySelectorAll('.mission-title').forEach(item => {
-    item.style.cursor = 'pointer';
-    item.addEventListener('click', () => {
-      const title = item.textContent.replace(':', '').trim();
-      modalText.textContent = missionDescriptions[title] || "Description non disponible.";
-      modal.classList.remove('hidden');
+  // Pour chaque élément qui a la classe "mission-title"
+  document.querySelectorAll('.mission-title').forEach(titre => {
+    titre.style.cursor = 'pointer'; // change le curseur pour montrer que c'est cliquable
+
+    titre.addEventListener('click', () => {
+      const nom = titre.textContent.replace(':', '').trim(); // récupère le texte du titre sans les deux-points
+      modalText.textContent = textes[nom] || "Pas de description disponible."; // insère le bon texte dans la modale
+      modal.classList.remove('hidden'); // affiche la modale (elle était masquée par défaut)
     });
   });
 
-  closeButton.addEventListener('click', () => {
-    modal.classList.add('hidden');
+  // Quand on clique sur la croix de fermeture de la modale
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden'); // on cache la modale
   });
 
-  // Fermer la modale si on clique en dehors du contenu
-  modal.addEventListener('click', (e) => {
+  // Si on clique en dehors du contenu de la modale (sur le fond blanc semi-transparent)
+  modal.addEventListener('click', e => {
     if (e.target === modal) {
-      modal.classList.add('hidden');
+      modal.classList.add('hidden'); // on ferme aussi la modale
     }
   });
 });

@@ -2,44 +2,41 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- Adaptation pour les écrans mobiles (responsive) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon (icône de l’onglet) -->
     <link rel="icon" type="image/vnd.icon" href="img/coco_favicon.ico">
 
-
-    <!-- fichiers css -->
+    <!-- Feuilles CSS -->
     <link href="css/style_apropos.css" rel="stylesheet">
     <link href="css/loader.css" rel="stylesheet">
     <link href="css/style_horloge.css" rel="stylesheet">
-    <link href="css/style_apropos.css" rel="stylesheet">
 
-    <!-- fichiers javascript -->
+    <!-- Scripts JavaScript -->
     <script src="javascript/general.js" defer></script>
     <script src="javascript/loader.js" defer></script>
     <script src="javascript/telephone.js" defer></script>
     <script src="javascript/apropos.js" defer></script>
 
-
-
-
-    <link href="css/style_apropos.css" rel="stylesheet">
-    <link href="css/loader.css" rel="stylesheet">
-    <link href="css/style_horloge.css" rel="stylesheet">
-    <script src="javascript/general.js" defer></script>
-    <script src="javascript/loader.js" defer></script>
+    <!-- Titre affiché dans l’onglet du navigateur -->
     <title>À propos - Ecoco</title>
 </head>
 <body>
-    <!-- Bandeau principal -->
+
+    <!-- Bandeau d'en-tête avec une image large -->
     <img class="bandeau" src="img/banniere_V2.png" alt="Bannière">
 
-    <!-- Loader : masqué par défaut grâce à la classe "hidden" -->
+    <!-- Loader (masqué par défaut via la classe "hidden") -->
     <div id="loader" class="loader hidden"></div>
 
-    <!-- Navbar -->
+    <!-- Barre de navigation principale -->
     <div class="navbar">
-        <!-- Logo cliquable -->
+        <!-- Logo cliquable redirigeant vers l'accueil -->
         <a href="index.html"><img src="img/coco.png" alt="Logo Noix de Coco"></a>
-        <!-- Liens vers les autres sections du site -->
+        
+        <!-- Liens vers les différentes pages du site -->
         <div class="links">
             <a href="produits.html" class="chargement">Produits</a>
             <a href="contact.html" class="chargement">Contact</a>
@@ -47,67 +44,77 @@
         </div>
     </div>
     
-
-    <!-- Section principale -->
+    <!-- Contenu principal de la page -->
     <div class="about-container">
+
+        <!-- Bloc avec horloge et chronomètre -->
         <div class="time-container">
-        <div>Heure : <span id="horloge">--:--:--</span></div>
-        <div>Temps passé : <span id="chrono">00:00:00</span></div>
+            <div>Heure : <span id="horloge">--:--:--</span></div>
+            <div>Temps passé : <span id="chrono">00:00:00</span></div>
         </div>
+
+        <!-- Titre principal -->
         <h1>À propos</h1>
         <hr>
 
-        <!-- Présentation -->
+        <!-- Section : Présentation de la startup -->
         <div class="about-section">
             <h2>Présentation de la startup</h2>
-            <p>Ecoco est une entreprise dédiée à la transformation créative et durable de la noix de coco. Nous croyons en la puissance de la nature et en la capacité de chacun à contribuer positivement à l'environnement.</p>
+            <p>Ecoco est une entreprise dédiée à la transformation créative et durable de la noix de coco...</p>
         </div>
 
-        <!-- Vision et mission -->
+        <!-- Section : Vision et mission -->
         <div class="about-section">
             <h2>Vision et Mission - Ecoco</h2>
+
             <h3>🌟 Vision</h3>
-            <p class="highlight">Faire de chaque noix de coco une source d’inspiration pour un mode de vie durable et créatif.</p>
-            <p>Nous rêvons d’un futur où chaque objet est réutilisé, repensé et valorisé pour préserver notre planète tout en cultivant le plaisir de créer.</p>
+            <p class="highlight">Faire de chaque noix de coco une source d’inspiration...</p>
+            <p>Nous rêvons d’un futur où chaque objet est réutilisé...</p>
 
             <h3>🎯 Mission</h3>
-            <p class="highlight">Réinventer la consommation en proposant une expérience durable et artistique autour des noix de coco.</p>
+            <p class="highlight">Réinventer la consommation...</p>
+            
+            <!-- Liste des missions cliquables -->
             <ul>
-               <li><strong class="mission-title">Offrir des produits de qualité :</strong> noix de coco fraîches et issues de circuits responsables.</li>
-               <li><strong class="mission-title">Promouvoir la durabilité :</strong> réduire le gaspillage et valoriser chaque fruit.</li>
-               <li><strong class="mission-title">Encourager la créativité :</strong> donner des outils pour des créations uniques.</li>
-               <li><strong class="mission-title">Sensibiliser à l’écologie :</strong> éduquer sur les habitudes respectueuses de l’environnement.</li>
-               <li><strong class="mission-title">Soutenir les communautés locales :</strong> travailler avec des producteurs et artisans locaux.</li>
-           </ul>
-
+                <li><strong class="mission-title">Offrir des produits de qualité :</strong> ...</li>
+                <li><strong class="mission-title">Promouvoir la durabilité :</strong> ...</li>
+                <li><strong class="mission-title">Encourager la créativité :</strong> ...</li>
+                <li><strong class="mission-title">Sensibiliser à l’écologie :</strong> ...</li>
+                <li><strong class="mission-title">Soutenir les communautés locales :</strong> ...</li>
+            </ul>
         </div>
 
-        <!-- Équipe -->
+        <!-- Section : Équipe -->
         <div class="about-section">
             <h2>Équipe</h2>
+
+            <!-- Carte membre d'équipe : Nathan -->
             <div class="team">
                 <div class="team-member">
-                  <div class="photo-wrapper">
-                    <img src="img/nathan.png" alt="Photo de Nathan">
-                    <div class="photo-cover"></div>
-                  </div>
-                  <p>Nathan DECHARGÉ</p>
+                    <div class="photo-wrapper">
+                        <img src="img/nathan.png" alt="Photo de Nathan">
+                        <div class="photo-cover"></div> <!-- Couche masquante (cliquable pour disparaître) -->
+                    </div>
+                    <p>Nathan DECHARGÉ</p>
                 </div>
-                
+
+                <!-- Carte membre d'équipe : Gabriel -->
                 <div class="team-member">
-                  <div class="photo-wrapper">
-                     <img src="img/gabriel.png" alt="Photo de Nathan">
-                     <div class="photo-cover"></div>
-                  </div>
-                  <p>Gabriel THUET</p>
+                    <div class="photo-wrapper">
+                        <img src="img/gabriel.png" alt="Photo de Gabriel">
+                        <div class="photo-cover"></div>
+                    </div>
+                    <p>Gabriel THUET</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Pied de page -->
     <div class="footer">
         © 2002-2024, Ecoco.com Inc. ou ses affiliés
+
+        <!-- Coordonnées des campus -->
         <div class="footer-coords">
             <p><strong>Brest :</strong> <span class="tel" data-num="+33298038400">02 98 03 84 00</span></p>
             <p><strong>Caen :</strong> <span class="tel" data-num="+33230310320">02 30 31 03 20</span></p>
@@ -115,12 +122,13 @@
             <p><strong>Rennes :</strong> <span class="tel" data-num="+33230130250">02 30 13 02 50</span></p>
         </div>
     </div>
+
+    <!-- Fenêtre modale pour afficher les descriptions des missions -->
     <div id="modal" class="modal hidden">
-      <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <p id="modal-text">Texte de mission...</p>
+        <div class="modal-content">
+            <span class="close-button">X</span> <!-- Bouton X pour fermer -->
+            <p id="modal-text">Texte de mission...</p>
+        </div>
     </div>
-</div>
 </body>
 </html>
-
