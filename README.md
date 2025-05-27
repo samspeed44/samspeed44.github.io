@@ -20,18 +20,6 @@ Les fichiers CSS associés contrôlent l'apparence du site et sont répartis dan
 
 
 
-## Points forts du design
-
-•	Design épuré et moderne : Chaque page utilise des couleurs douces inspirées de la nature pour une expérience apaisante.
-
-•	Navigation fluide : La barre de navigation est présente sur chaque page pour permettre aux utilisateurs de passer rapidement d'une section à l'autre.
-
-•	Responsive : Le site est optimisé pour une utilisation sur tous les types d'appareils, avec des styles adaptés aux petites tailles d'écran.
-
-•	Accessibilité : Le site utilise des couleurs et des contrastes qui respectent les normes d'accessibilité pour une meilleure lisibilité.
-
-
-
 ## Accès en ligne
 
 Vous pouvez consulter ce site directement en ligne via GitHub Pages à l'adresse suivante : https://samspeed44.github.io/
