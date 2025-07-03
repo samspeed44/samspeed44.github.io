@@ -26,5 +26,5 @@ Vous pouvez consulter ce site directement en ligne via GitHub Pages à l'adresse
 
 
 ## Contributeurs
-•	Nathan DECHARGÉ
-•	Gabriel THUET
+•	Samspeed
+•	Tattanka
